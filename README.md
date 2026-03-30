@@ -51,7 +51,7 @@ eno1      lan0
 2. Based on status:
    - 🟢 Both up → Load balancing (multipath routing)
    - 🔴 One down → Switch to active ISP
-   - ⚠️ Both down → Alert
+   - ⚠️ Any ISP down → Alert
 
 3. Automatically updates:
    - Routing tables
