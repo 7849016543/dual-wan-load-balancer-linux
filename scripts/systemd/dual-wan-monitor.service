@@ -1,0 +1,13 @@
+[Unit]
+Description=WAN Monitor Service
+After=network.target systemd-networkd.service
+Wants=network.target systemd-networkd.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/dual-wan-monitor.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
