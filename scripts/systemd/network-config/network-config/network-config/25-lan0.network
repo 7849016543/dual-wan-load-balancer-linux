@@ -1,0 +1,33 @@
+# Configure ISP2 (lan0)
+
+[Match]
+
+Name=lan0
+
+##ISP NAME##  
+
+[Network]
+
+DHCP=ipv4
+
+IPForward=yes
+
+IPMasquerade=yes
+
+  
+
+[DHCP]
+
+RouteTable=2       # Use routing table 2
+
+RouteMetric=100    # Match script's metric
+
+  
+
+[RoutingPolicyRule]
+
+From=192.168.0.0/24  # Actual network for lan0
+
+Table=2
+
+Priority=100
